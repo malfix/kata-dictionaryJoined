@@ -2,6 +2,10 @@ require_relative "exercise"
 require "test/unit"
 
 class TestExercise < Test::Unit::TestCase
+  test 'exercise test 0  ' do
+    assert_equal([], Exercise.new('quick', 'brown', 'the', 'fox' ).find_all_sentence('theqXXuickbrownfox'))
+  end
+
   test 'exercise test 1  ' do
     assert_equal([['the', 'quick', 'brown', 'fox']], Exercise.new('quick', 'brown', 'the', 'fox' ).find_all_sentence('thequickbrownfox'))
   end
